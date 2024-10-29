@@ -1,0 +1,437 @@
+/* Habilitar scroll-snap */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Configurações para as seções */
+section {
+    scroll-snap-align: start;
+    min-height: 100vh; /* Cada seção ocupará a altura total da viewport */
+}
+
+/* Reset básico e estilização global */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e5e5;
+}
+
+header {
+    background-color: #e5e5e5;
+    color: #666;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100; /* Mantém o header acima dos outros elementos */
+}
+
+
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Esconde o botão de menu em telas grandes */
+.menu-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    z-index: 100; /* Para garantir que o ícone esteja acima de outros elementos */
+}
+
+
+/* Ajuste para os contêineres de eventos e agenda/social ficarem lado a lado */
+#events-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+/* Seção de eventos ocupa metade do espaço à esquerda */
+.upcoming-events {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.upcoming-events h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    text-align: justify;
+    font-size: 1.2em; 
+    color: #555;
+    margin: 20px auto;
+    padding: 0 30px;
+    max-width: 600px;
+    line-height: 1.6em; 
+}
+
+.event-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.calendar {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-color: #6ca0dc #ff7f50 #ff7f50 #6ca0dc;
+}
+
+.calendar .date {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.calendar .month {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: -10px;
+}
+
+.details {
+    text-align: left;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.ticket-btn {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.ticket-btn:hover {
+    background-color: #ff5722;
+}
+
+/* Wrapper para Agenda e Redes Sociais no lado direito */
+.agenda-social-wrapper {
+    width: 48%;
+}
+
+/* Estilos da agenda */
+.agenda-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.agenda-section h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.agenda-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.agenda-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agenda-item .time {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff7f50;
+}
+
+.agenda-item .activity {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Estilo da seção de Redes Sociais */
+.social-media-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-media-section h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-media-content {
+    text-align: center;
+}
+
+.social-media-content a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ff7f50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-media-content a:hover {
+    color: #ff5722;
+}
+
+/* Estilos do carrossel de palestrantes */
+.embla {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}/* Reset básico e estilização global */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    border-radius: 5px;
+    color: white;
+}
+
+
+/* Estilos do carrossel de palestrantes */
+.embla {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    position: relative;
+    min-width: 100%;
+    padding: 20px;
+}
+
+
+.speaker-card h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.speaker-card img {
+    width: 40%;  /* Ajuste o tamanho conforme desejado */
+    height: 40%; /* Mantém a proporção quadrada */
+    border-radius: 0; /* Mantém os cantos levemente arredondados */
+    margin-bottom: 10px;
+}
+
+.speaker-card p {
+    font-size: 1em;
+    color: #333;
+    text-align: justify;
+}
+
+/* Estilizando os controles do carrossel */
+.embla__controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    pointer-events: none;
+}
+
+.embla__button {
+    pointer-events: all;
+    background-color: #ff7f50;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.embla__button--prev {
+    left: 20px;
+}
+
+.embla__button--next {
+    right: 20px;
+}
+
+.embla__button:hover {
+    background-color: #ff5722;
+}
+
+
+.text {
+    text-align: justify;
+}
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde o menu */
+        align-items: center;
+        flex-direction: column;
+        background-color: #e5e5e5;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    /* Mostra o botão de menu em telas pequenas */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Exibe o menu quando a classe 'open' estiver presente */
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    #events-container {
+        flex-direction: column;
+    }
+
+    .upcoming-events, .agenda-social-wrapper {
+        width: 100%;
+    }
+
+    .agenda-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .agenda-item .time, .agenda-item .activity {
+        text-align: center;
+    }
+
+}
+
+#speakers {
+    scroll-snap-align: start;
+    display: block;
+    min-height: calc(80vh - 20px); 
+    margin-bottom: 20px;
+}
+
+#speakers h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.speaker-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #ddd;
+    min-height: 300px;
+    word-wrap: break-word;
+    min-width: 20;
+    max-width: 25%;
+}
+
+
+/* Rodapé */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

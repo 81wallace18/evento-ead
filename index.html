@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">My Events</div>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events-container">Evento</a></li>
+                <li><a href="#agenda">Programação</a></li>
+                <li><a href="#speakers">Palestrantes</a></li>
+                <li><a href="#social">Medias Sociais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="events-container">
+        <div class="upcoming-events">
+            <h1>Evento</h1>
+            <p class="event-description">O Congresso de Urologia Norte-Nordeste 2025 em Belém do Pará promete reunir especialistas da área para discutir inovações e avanços no tratamento de doenças urológicas, fortalecendo a troca de conhecimento na região.</p>
+            <div class="event-calendar">
+                <div class="calendar">
+                    <div class="date">06</div>
+                    <div class="month">Novembro</div>
+                </div>
+                <div class="details">
+                    <p>Date: 06 Novembro 2024</p>
+                    <p>Time: 10:00 AM</p>
+                </div>
+                <button class="ticket-btn">Get Ticket</button>
+            </div>
+        </div>
+    
+        <div class="agenda-social-wrapper" id="agenda">
+            <div class="agenda-section">
+                <h2>Programação</h2>
+                <div class="agenda-card">
+                    <div class="agenda-item">
+                        <span class="time">19:00 - 19:20</span>
+                        <span class="activity">Abertura</span>
+                    </div>
+                    <div class="agenda-item">
+                        <span class="time">19:20 - 19:40</span>
+                        <span class="activity">Palestra Desafios na EAD</span>
+                    </div>
+                    <div class="agenda-item">
+                        <span class="time">10:40 - 20:10</span>
+                        <span class="activity">Mesa Redonda</span>
+                    </div>
+                    <div class="agenda-item">
+                        <span class="time">20:10 - 20:40</span>
+                        <span class="activity">Possibilidades Futuras no EAD</span>
+                    </div>
+                    <div class="agenda-item">
+                        <span class="time">20:40- 20:55</span>
+                        <span class="activity">Dinâmica</span>
+                    </div>
+                    <div class="agenda-item">
+                        <span class="time">20:55 - 21:00</span>
+                        <span class="activity">Encerramento</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Seção de Redes Sociais separada e abaixo da agenda -->
+            <div class="social-media-section" id="social">
+                <h2>Redes Sociais</h2>
+                <div class="social-media-content">
+                    <p>Siga-nos nas redes sociais:</p>
+                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                    <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="speakers">
+        <div class="embla">
+            <h2>Palestrantes</h2>
+            <div class="embla__viewport">
+                <div class="embla__container">
+                    <div class="embla__slide">
+                    <div class="speaker-card">
+                            <img src="/home/ltcd/pagina_evento/images/mario.jpeg" alt="Speaker 1">
+                            <h4>Mario Barbosa</h4>
+                            <p>Mário Barbosa é tecnólogo em Segurança da Informação, com ampla experiência em Tecnologia da Informação, atuando como Analista de Suporte em TI desde 2016. Ao longo de sua carreira, desenvolveu habilidades em gestão de incidentes, segurança cibernética e suporte técnico, sempre focado em proporcionar soluções eficazes e proteger os ativos digitais das organizações em que atua. Com uma abordagem dedicada e proativa, Mário se destaca pelo comprometimento com a excelência e pela busca constante por atualizações na área tecnológica.</p>
+                        </div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="speaker-card">
+                            <img src="/home/ltcd/pagina_evento/images/alexandro.jpeg" alt="Speaker 2">
+                            <h4>Alexandro</h4>
+                            <p>Instrutor de Desenho na Fundação Curro Velho, com experiência em animação gráfica, tendo colaborado na produção da ópera O Viajante das Lendas Amazônicas, onde aplicou suas habilidades criativas para dar vida visual às narrativas da Amazônia</p>
+                        </div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="speaker-card">
+                            <img src="/home/ltcd/pagina_evento/images/rodrigo.jpeg" alt="Speaker 3">
+                            <h4>Rodrigo</h4>
+                            <p>Rodrigo Costa. Licenciatura em Computação (em andamento). Universidade Federal Rural da Amazônia, Belém-PA. Ingresso em 2018. Experiência em Bacharelado em Ciências da Computação (2021-2022) modalidade EAD. Retorno à Licenciatura em 2023.
+                                Habilidades: Suporte técnico, configuração de redes, cabeamento estruturado.
+                                Interesses: cyber security, certificações CISCO, ITIL</p>
+                        </div>
+                    </div>
+                    <div class="embla__slide">
+                        <div class="speaker-card">
+                            <img src="speaker4.jpg" alt="Speaker 4">
+                            <h4>Susan White</h4>
+                            <p>Topic: Telemedicine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="embla__controls">
+                <button class="embla__button embla__button--prev" type="button">&#10094;</button>
+                <button class="embla__button embla__button--next" type="button">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Events</p>
+    </footer>
+
+    <script src="https://unpkg.com/embla-carousel@6.0.0/embla-carousel.umd.js"></script>
+    <script src="/home/ltcd/pagina_evento/script.js"></script>
+
+
+</body>
+</html>
